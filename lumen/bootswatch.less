@@ -1,4 +1,4 @@
-// Lumen 3.1.1
+// Lumen 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -159,7 +159,7 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 
@@ -169,7 +169,7 @@ table,
   .info {
     color: #fff;
 
-    a {
+    a:not(.btn) {
       color: #fff;
     }
   }
@@ -364,26 +364,25 @@ label {
 
 // Indicators =================================================================
 
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
 .alert {
   .shadow();
 
-  a,
   .alert-link {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    color: #fff;
-    text-decoration: none;
-    opacity: 0.4;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
   }
 }
 
@@ -417,4 +416,20 @@ label {
 .panel {
   border: 1px solid @navbar-default-border;
   .shadow();
+
+  &-default {
+    .close {
+      color: @text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
+  }
+}
+
+.popover {
+  color: @text-color;
 }
