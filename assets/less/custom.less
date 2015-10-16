@@ -1,10 +1,43 @@
 body {
   padding-top: 50px;
+
+  > .navbar {
+    -webkit-transition: background-color 300ms ease-in;
+    transition: background-color 300ms ease-in;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    > .navbar-transparent {
+      background-color: transparent;
+
+      .navbar-nav > .open > a {
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+#home {
+  padding-top: 0px;
+  .navbar-brand {
+    padding: 13.5px 15px 12.5px;
+    > img {
+      display: inline;
+      margin: 0 10px;
+      height: 100%;
+    }
+  }
 }
 
 #banner {
   min-height: 300px;
   border-bottom: none;
+}
+
+.table-of-contents {
+  margin-top: 1em;
 }
 
 .page-header {
@@ -15,7 +48,11 @@ body {
 }
 
 .bs-docs-section {
-  margin-top: 8em;
+  margin-top: 6em;
+
+  h1 {
+    padding-top: 100px;
+  }
 }
 
 .bs-component {
@@ -75,8 +112,11 @@ footer {
 }
 
 .splash {
-  padding: 5em 0 2em;
+  padding: 9em 0 2em;
   background-color: #141d27;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
 
